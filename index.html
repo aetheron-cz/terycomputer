@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2026 Aetheron (aetheron.cz). All rights reserved.
+
+  This mockup, including its design, layout, source code, styles, scripts
+  and copy, is the intellectual property of Aetheron (https://aetheron.cz).
+  It was prepared as a proposal for TeryComputer and is not licensed for use.
+
+  Copying, reproducing, modifying, redistributing, publishing or using any
+  part of this work, in whole or in part, without prior written permission
+  from Aetheron is prohibited. Infringement will be pursued.
+-->
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Aetheron — aetheron.cz">
+<meta name="copyright" content="© 2026 Aetheron (aetheron.cz). All rights reserved.">
+<title>TeryComputer.cz — prodejna, e-shop a servis počítačů, Praha 5 Zlíchov</title>
+<meta name="description" content="Prodejna výpočetní techniky Na Zlíchově 9 v Praze 5 s vlastním e-shopem. Servis, výkup a bazar, PC na míru. Technik u vás do 6 pracovních hodin. Od roku 1998.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%233d3e40'/%3E%3Crect x='17' y='13' width='66' height='60' rx='8' fill='%23f35702'/%3E%3Crect x='22' y='18' width='56' height='46' rx='5' fill='%23ff6a17'/%3E%3Ctext x='30' y='46' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='30' fill='%23fff'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,700;62..125,800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="TeryComputer.cz — úvod">
+      <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" rx="12" fill="#3d3e40"/>
+        <rect x="17" y="13" width="66" height="60" rx="8" fill="#c24602"/>
+        <rect x="17" y="13" width="66" height="54" rx="8" fill="#f35702"/>
+        <rect x="22" y="17" width="56" height="45" rx="5" fill="#ff6a17"/>
+        <text x="29" y="47" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="800" font-size="31" fill="#fff">T</text>
+        <text x="50" y="88" text-anchor="middle" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" fill="#fff">TeryComputer.cz</text>
+      </svg>
+      <span class="logo-word">TeryComputer.cz</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Hlavní navigace">
+      <a href="#servis">Servis a ceník</a>
+      <a href="#prodejna">Prodejna</a>
+      <a href="#vykup">Výkup a bazar</a>
+      <a href="#namiru">PC na míru</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="nav-right">
+      <span class="status nav-status"><span class="dot" id="navDot"></span><span id="navStatus">Po–Čt 9–18, Pá 9–17</span></span>
+      <a class="pill" href="tel:+420777902690">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span>777 902 690</span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Otevřít menu"><span></span></button>
+    </div>
+  </div>
+
+  <div class="menu" id="menu">
+    <div class="wrap">
+      <a href="#servis">Servis a ceník</a>
+      <a href="#prodejna">Prodejna</a>
+      <a href="#vykup">Výkup a bazar</a>
+      <a href="#namiru">PC na míru</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="https://obchod.terycomputer.cz/" target="_blank" rel="noopener">E-shop ↗</a>
+    </div>
+  </div>
+
+  <div class="status-strip">
+    <div class="wrap"><span class="status"><span class="dot" id="stripDot"></span><span id="stripStatus">Po–Čt 9–18, Pá 9–17</span></span></div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+
+    <!-- row A: the statement -->
+    <div class="hero-a">
+      <h1 class="hero-h1">Počítače, servis a výkup.<br>Na Zlíchově od roku 2005.</h1>
+      <p class="hero-lead">Prodáváme za internetové ceny, opravíme u vás do 6 hodin a vykoupíme i nefunkční notebook. Nemáme sto zaměstnanců ani obří reklamy, ale umíme poradit.</p>
+    </div>
+
+    <!-- row B: the card band -->
+    <div class="hero-b">
+      <div class="shelf" id="shelf">
+        <div class="shelf-stage">
+          <article class="feat is-active" id="feat-1" aria-label="HP 250R G10">
+            <div class="feat-text">
+              <span class="badge">Akce · 10&nbsp;505&nbsp;Kč</span>
+              <h2 class="feat-h">Notebook do kanceláře<br>i pro studenta</h2>
+              <p class="feat-desc">Core 3 100U, 8 GB DDR4, 512GB SSD, 15,6" Full HD, Windows 11 Home. Vyzvednete si ho u nás na prodejně, nebo vám ho pošleme.</p>
+              <div class="feat-actions">
+                <a class="btn btn-orange" href="https://obchod.terycomputer.cz/cs/339983-hp-250r-g10" target="_blank" rel="noopener">Zobrazit v e-shopu <span aria-hidden="true">→</span></a>
+                <a class="link-ink" href="#kontakt">Poradíme s výběrem</a>
+              </div>
+              <span class="feat-code mono">HP 250R G10 · NOTCA1583</span>
+            </div>
+            <div class="feat-photo"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTCA1583" width="400" height="400" alt="Notebook HP 250R G10"></div>
+          </article>
+          <article class="feat" id="feat-2" aria-label="UMAX U-Box N59 Pro" hidden>
+            <div class="feat-text">
+              <span class="badge">Od 7&nbsp;700&nbsp;Kč</span>
+              <h2 class="feat-h">Mini počítač,<br>co se schová za monitor</h2>
+              <p class="feat-desc">Celeron N5095, 8 GB DDR4, 256GB SSD, Wi-Fi, Bluetooth, Windows 11 Pro. Tichý, malý, na běžnou práci bohatě stačí.</p>
+              <div class="feat-actions">
+                <a class="btn btn-orange" href="https://obchod.terycomputer.cz/cs/341411-umax-u-box-n59-pro" target="_blank" rel="noopener">Zobrazit v e-shopu <span aria-hidden="true">→</span></a>
+                <a class="link-ink" href="#kontakt">Poradíme s výběrem</a>
+              </div>
+              <span class="feat-code mono">UMAX U-Box N59 Pro · BOXUMX1017</span>
+            </div>
+            <div class="feat-photo"><img src="https://www.img4.cz/www/img/imgthumb?code=BOXUMX1017" width="400" height="400" alt="Mini počítač UMAX U-Box N59 Pro" loading="lazy"></div>
+          </article>
+          <article class="feat" id="feat-3" aria-label="Dell Alienware AW2726DL" hidden>
+            <div class="feat-text">
+              <span class="badge">Akce · 3&nbsp;835&nbsp;Kč</span>
+              <h2 class="feat-h">Herní monitor<br>s 280 Hz</h2>
+              <p class="feat-desc">27" IPS, 2560×1440, 280 Hz, odezva 1 ms, HDMI i DisplayPort, PIVOT a VESA.</p>
+              <div class="feat-actions">
+                <a class="btn btn-orange" href="https://obchod.terycomputer.cz/cs/342209-dell-alienware-aw2726dl-27" target="_blank" rel="noopener">Zobrazit v e-shopu <span aria-hidden="true">→</span></a>
+                <a class="link-ink" href="#kontakt">Poradíme s výběrem</a>
+              </div>
+              <span class="feat-code mono">Dell Alienware AW2726DL · MOND7290</span>
+            </div>
+            <div class="feat-photo"><img src="https://www.img4.cz/www/img/imgthumb?code=MOND7290" width="400" height="400" alt="Herní monitor Dell Alienware AW2726DL 27 palců" loading="lazy"></div>
+          </article>
+          <article class="feat" id="feat-4" aria-label="Lenovo V15 G5 IRL" hidden>
+            <div class="feat-text">
+              <span class="badge">Od 12&nbsp;210&nbsp;Kč</span>
+              <h2 class="feat-h">Pracovní notebook<br>na každý den</h2>
+              <p class="feat-desc">Core 5 210H, 8 GB DDR5, 512GB SSD, 15,6" Full HD, Wi-Fi 6, USB-C, Windows 11 Home.</p>
+              <div class="feat-actions">
+                <a class="btn btn-orange" href="https://obchod.terycomputer.cz/cs/327898-lenovo-v15-g5-irl" target="_blank" rel="noopener">Zobrazit v e-shopu <span aria-hidden="true">→</span></a>
+                <a class="link-ink" href="#kontakt">Poradíme s výběrem</a>
+              </div>
+              <span class="feat-code mono">Lenovo V15 G5 IRL · NOTL3047</span>
+            </div>
+            <div class="feat-photo"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTL3047" width="400" height="400" alt="Notebook Lenovo V15 G5 IRL" loading="lazy"></div>
+          </article>
+        </div>
+        <div class="switch" role="group" aria-label="Vybrané zboží z e-shopu">
+          <a class="thumb is-active" href="https://obchod.terycomputer.cz/cs/339983-hp-250r-g10" target="_blank" rel="noopener" data-feat="feat-1">
+            <span class="thumb-img"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTCA1583" width="400" height="400" alt=""></span>
+            <span class="thumb-txt"><span class="thumb-name">HP 250R G10</span><span class="thumb-price">10&nbsp;505&nbsp;Kč</span></span>
+          </a>
+          <a class="thumb" href="https://obchod.terycomputer.cz/cs/341411-umax-u-box-n59-pro" target="_blank" rel="noopener" data-feat="feat-2">
+            <span class="thumb-img"><img src="https://www.img4.cz/www/img/imgthumb?code=BOXUMX1017" width="400" height="400" alt=""></span>
+            <span class="thumb-txt"><span class="thumb-name">UMAX U-Box N59 Pro</span><span class="thumb-price">7&nbsp;700&nbsp;Kč</span></span>
+          </a>
+          <a class="thumb" href="https://obchod.terycomputer.cz/cs/342209-dell-alienware-aw2726dl-27" target="_blank" rel="noopener" data-feat="feat-3">
+            <span class="thumb-img"><img src="https://www.img4.cz/www/img/imgthumb?code=MOND7290" width="400" height="400" alt=""></span>
+            <span class="thumb-txt"><span class="thumb-name">Dell Alienware AW2726DL</span><span class="thumb-price">3&nbsp;835&nbsp;Kč</span></span>
+          </a>
+          <a class="thumb" href="https://obchod.terycomputer.cz/cs/327898-lenovo-v15-g5-irl" target="_blank" rel="noopener" data-feat="feat-4">
+            <span class="thumb-img"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTL3047" width="400" height="400" alt=""></span>
+            <span class="thumb-txt"><span class="thumb-name">Lenovo V15 G5 IRL</span><span class="thumb-price">12&nbsp;210&nbsp;Kč</span></span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="svc-dark" aria-label="Expresní servis">
+        <div class="svc-dark-head">
+          <span class="eyebrow-o">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 4.6V8l2.3 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Expresní servis
+          </span>
+          <h2 class="svc-h">Technik u vás<br>do 6 hodin</h2>
+          <p class="svc-text">Do 6 pracovních hodin od objednání garantujeme technika na místě. Na prodejně vám ve stejném čase řekneme, co je za závadou a kolik oprava bude stát.</p>
+        </div>
+        <div class="svc-dark-foot">
+          <ul class="svc-prices">
+            <li><span>Servisní hodina</span><b>500&nbsp;Kč</b></li>
+            <li><span>Výjezd technika</span><b>150&nbsp;Kč / 15&nbsp;min</b></li>
+            <li><span>Expresní výjezd</span><b>20&nbsp;Kč/min</b></li>
+          </ul>
+          <a class="btn btn-white btn-block" href="#servis">Celý ceník servisu</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- row C: the keycap row -->
+    <nav class="keys" aria-label="Rozcestník">
+      <a class="key" href="#servis"><span class="key-legend mono">údržba</span><span class="key-label">Údržba od 199&nbsp;Kč</span><span class="key-sub mono">pro PC koupené u nás</span></a>
+      <a class="key" href="#vykup"><span class="key-legend mono">výkup</span><span class="key-label">Výkup a bazar</span><span class="key-sub mono">i nefunkční</span></a>
+      <a class="key" href="#namiru"><span class="key-legend mono">sestavy</span><span class="key-label">PC na míru</span><span class="key-sub mono">do 3 dnů</span></a>
+      <a class="key key-enter" href="https://obchod.terycomputer.cz/" target="_blank" rel="noopener"><span class="key-legend mono">enter ↵</span><span class="key-label">E-shop</span><span class="key-sub mono">obchod.terycomputer.cz ↗</span></a>
+    </nav>
+  </div>
+</section>
+
+<!-- ============ AKTUÁLNÍ NABÍDKA ============ -->
+<section class="section" id="nabidka">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Aktuální nabídka</h2>
+      <p class="sec-lead">Notebooky, počítače a příslušenství z prodejny Na Zlíchově. Ceny včetně DPH.</p>
+    </div>
+
+    <div class="tiles">
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/334102-umax-all-in-one-u-one-24at-pro" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=POCUMX1008" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">UMAX All-in-One U-One 24AT Pro</span><span class="tile-spec">All-in-one počítač, 23,8"</span><span class="tile-price">8&nbsp;706&nbsp;Kč</span><span class="tile-code mono">POCUMX1008</span></span>
+      </a>
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/336851-hp-255r-g10" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTCA1475" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">HP 255R G10</span><span class="tile-spec">Ryzen 3 7335U, 8 GB DDR5, 512GB SSD</span><span class="tile-price">10&nbsp;175&nbsp;Kč</span><span class="tile-code mono">NOTCA1475</span></span>
+      </a>
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/320071-lenovo-v15-g4-amn" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTL1973" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">Lenovo V15 G4 AMN</span><span class="tile-spec">Ryzen 5 7520U, 8 GB DDR5, 512GB SSD</span><span class="tile-price">12&nbsp;391&nbsp;Kč</span><span class="tile-code mono">NOTL1973</span></span>
+      </a>
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/271925-umax-visionbook-n15r-pro" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTUMX1048" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">UMAX VisionBook N15R Pro</span><span class="tile-spec">Celeron N4120, 4 GB, 128GB SSD, 15,6"</span><span class="tile-price">5&nbsp;308&nbsp;Kč</span><span class="tile-code mono">NOTUMX1048</span></span>
+      </a>
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/260244-umax-visionbook-15wu-i3" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTUMX1036" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">UMAX VisionBook 15WU-i3</span><span class="tile-spec">Core i3-10110U, 4 GB DDR4, 128GB SSD</span><span class="tile-price">5&nbsp;796&nbsp;Kč</span><span class="tile-code mono">NOTUMX1036</span></span>
+      </a>
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/339978-be-quiet-dark-perk-sym" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=MOUBQT1100" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">Be quiet! DARK PERK Sym</span><span class="tile-spec">Herní bezdrátová myš, 32 000 DPI, výdrž až 110 h</span><span class="tile-price">2&nbsp;228&nbsp;Kč</span><span class="tile-code mono">MOUBQT1100</span></span>
+      </a>
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/343396-endorfy-viro-wireless" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=SLUEND2000" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">Endorfy VIRO Wireless</span><span class="tile-spec">Herní headset, Bluetooth i 2,4 GHz, výdrž až 240 h</span><span class="tile-price">2&nbsp;192&nbsp;Kč</span><span class="tile-code mono">SLUEND2000</span></span>
+      </a>
+      <a class="tile" href="https://obchod.terycomputer.cz/cs/339935-lenovo-fingerprint-biometric-usb" target="_blank" rel="noopener">
+        <span class="tile-img"><img src="https://www.img4.cz/www/img/imgthumb?code=NOTLP138" width="400" height="400" alt="" loading="lazy"></span>
+        <span class="tile-body"><span class="tile-name">Lenovo Fingerprint Biometric USB</span><span class="tile-spec">Drátová myš se čtečkou otisku prstů</span><span class="tile-price">727&nbsp;Kč</span><span class="tile-code mono">NOTLP138</span></span>
+      </a>
+    </div>
+
+    <div class="nabidka-foot">
+      <a class="btn btn-outline" href="https://obchod.terycomputer.cz/" target="_blank" rel="noopener">Celý e-shop <span aria-hidden="true">→</span></a>
+      <span class="mono meta">Ceny z našeho e-shopu k 13. 9. 2026</span>
+    </div>
+
+    <ul class="trust">
+      <li><strong>Zboží do hodiny</strong><span>ze skladu na naší prodejně</span></li>
+      <li><strong>Doručení do druhého dne</strong><span>pro všechny zásilky</span></li>
+      <li><strong>Doprava zdarma</strong><span>pro objednávky nad 5&nbsp;000&nbsp;Kč</span></li>
+      <li><strong>Platba kartou i převodem</strong><span>na prodejně i hotově</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SERVIS A CENÍK ============ -->
+<section class="section" id="servis">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Servis a ceník</h2>
+      <p class="sec-lead">Opravujeme u nás na prodejně nebo přímo u vás. Všechny ceny jsou včetně DPH. Pro firmy nabízíme servisní smlouvu.</p>
+    </div>
+
+    <div class="card svc-card">
+      <div class="svc-express">
+        <div><strong>Expresní diagnostika na prodejně</strong><span>Do 6 pracovních hodin od příjmu vám řekneme, co je za závadou, jak ji opravit a kolik to přibližně bude stát.</span></div>
+        <div><strong>Expresní výjezd technika</strong><span>Technik je u vás do 6 pracovních hodin od objednání (Praha).</span></div>
+      </div>
+      <ul class="svc-list">
+        <li>Diagnostika závady a následná oprava</li>
+        <li>Servis notebooků, PC a tiskáren</li>
+        <li>Sestavení PC z komponent, výměna a přidání komponent</li>
+        <li>Instalace systému, ovladačů a softwaru</li>
+        <li>Odvirování a antivirová kontrola</li>
+        <li>Záloha dat a záchrana dat z pevných disků</li>
+        <li>Pravidelná údržba a čištění PC</li>
+        <li>Měření a instalace bezdrátových sítí</li>
+      </ul>
+    </div>
+
+    <div class="ceny">
+      <div class="card">
+        <h3 class="card-title">Práce</h3>
+        <ul class="rows">
+          <li><span class="r-name">Servisní hodina na prodejně <em>účtujeme po ½ hod</em></span><span class="r-price">500&nbsp;Kč/hod</span></li>
+          <li><span class="r-name">Servis u zákazníka <em>po první půlhodině po 15 min</em></span><span class="r-price">150&nbsp;Kč / 15&nbsp;min</span></li>
+          <li><span class="r-name">Expresní výjezd, technik do 6 prac. hodin <em>Praha</em></span><span class="r-price">20&nbsp;Kč/min</span></li>
+          <li><span class="r-name">Doprava po Praze 5</span><span class="r-price">200&nbsp;Kč</span></li>
+          <li><span class="r-name">Doprava po Praze</span><span class="r-price">300&nbsp;Kč</span></li>
+          <li><span class="r-name">Doprava mimo Prahu</span><span class="r-price">20&nbsp;Kč/km + 300&nbsp;Kč</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Běžné úkony</h3>
+        <ul class="rows">
+          <li><span class="r-name">Reinstalace Windows <em>desktop i notebook</em></span><span class="r-price">1&nbsp;000–1&nbsp;500&nbsp;Kč</span></li>
+          <li><span class="r-name">Antivirová kontrola PC</span><span class="r-price">500&nbsp;Kč</span></li>
+          <li><span class="r-name">Záloha dat do 10 GB</span><span class="r-price">300&nbsp;Kč</span></li>
+          <li><span class="r-name">Záloha dat nad 10 GB</span><span class="r-price">500&nbsp;Kč</span></li>
+          <li><span class="r-name">Čištění PC sestavy</span><span class="r-price">300&nbsp;Kč</span></li>
+          <li><span class="r-name">Kompletní čištění notebooku</span><span class="r-price">900&nbsp;Kč</span></li>
+          <li><span class="r-name">Sestavení PC z komponent z našeho e-shopu</span><span class="r-price">600&nbsp;Kč</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-highlight">
+      <div>
+        <h3 class="card-title">Pravidelná kontrola pro počítače koupené u nás</h3>
+        <p class="hl-note">Proměření zdroje, vyčištění vnitřku, čištění ventilátorů. Doporučujeme jednou až dvakrát ročně.</p>
+      </div>
+      <span class="hl-price">199&nbsp;Kč</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VÝKUP A BAZAR ============ -->
+<section class="section section-surface" id="vykup">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Vykupujeme i nefunkční notebooky</h2>
+      <p class="sec-lead">Počítače, notebooky, LCD monitory. Vyberte si, jestli chcete peníze hned, nebo víc peněz později.</p>
+    </div>
+
+    <div class="options">
+      <div class="card card-white">
+        <h3 class="opt-title">Peníze na ruku</h3>
+        <p class="opt-sub">Hodí se, když potřebujete peníze rychle.</p>
+        <ul class="rows">
+          <li><span class="r-name">Kdy dostanete peníze</span><span class="r-val">hned po otestování</span></li>
+          <li><span class="r-name">Kdo určuje cenu</span><span class="r-val">TeryComputer</span></li>
+          <li><span class="r-name">Provize</span><span class="r-val">–</span></li>
+        </ul>
+      </div>
+      <div class="card card-white">
+        <h3 class="opt-title">Komisní prodej</h3>
+        <p class="opt-sub">Hodí se, když chcete maximální výdělek.</p>
+        <ul class="rows">
+          <li><span class="r-name">Kdy dostanete peníze</span><span class="r-val">týden po prodeji</span></li>
+          <li><span class="r-name">Kdo určuje cenu</span><span class="r-val">vy</span></li>
+          <li><span class="r-name">Provize</span><span class="r-val">20 % z prodejní ceny</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fineprint">Testování obvykle 1–2 dny · s sebou platný občanský průkaz a ideálně daňový doklad · na bazarové zboží je záruka 1 týden</p>
+  </div>
+</section>
+
+<!-- ============ PC NA MÍRU ============ -->
+<section class="section" id="namiru">
+  <div class="wrap">
+    <div class="band">
+      <div class="band-main">
+        <h2 class="sec-title">PC na míru</h2>
+        <p class="band-lead">Řekněte nám, na co počítač chcete: na hry, na domácí surfování, pro děti. Nebo jen cenový limit. O zbytek se postaráme.</p>
+        <ul class="facts">
+          <li><strong>do 3 pracovních dnů</strong><span>obvyklé dodání</span></li>
+          <li><strong>2 roky záruka</strong><span>za příplatek 3 roky</span></li>
+          <li><strong>tichý počítač</strong><span>na přání</span></li>
+          <li><strong>miniaturní case</strong><span>na přání</span></li>
+        </ul>
+        <a class="btn btn-orange" href="tel:+420777902690">Poradit se o sestavě</a>
+      </div>
+      <div class="band-side">
+        <h3 class="band-h3">Notebook, nebo stolní PC?</h3>
+        <p>Zákazníci často chtějí automaticky notebook. Doma ale většinou stojí na stole.</p>
+        <ul class="checks">
+          <li><span class="ck"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.6 6.3 5 8.6l4.5-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Stolní PC bývá levnější než notebook se stejnými parametry.</span></li>
+          <li><span class="ck"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.6 6.3 5 8.6l4.5-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Komponenty jde vyměnit a vylepšit. U notebooku jen omezeně.</span></li>
+          <li><span class="ck"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.6 6.3 5 8.6l4.5-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Politá klávesnice může u notebooku znamenat opravu v řádu tisíců.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OD ROKU 1998 ============ -->
+<section class="section" id="prodejna">
+  <div class="wrap historie">
+    <div class="photos">
+      <figure class="ph ph-a"><img src="https://www.terycomputer.cz/data/1313408783/obchod.jpg" width="480" height="314" alt="Interiér prodejny TeryComputer Na Zlíchově" loading="lazy"></figure>
+      <figure class="ph ph-b"><img src="https://terycomputer.cz/img/foto_obchod.jpg" width="280" height="542" alt="Prodejní pult a vitrína s příslušenstvím" loading="lazy"></figure>
+      <p class="photo-cap">Prodejna Na Zlíchově 9 · 180 m²</p>
+    </div>
+    <div>
+      <h2 class="sec-title">Počítače jsou náš svět od roku 1998</h2>
+      <ol class="timeline">
+        <li><span class="ty">1998</span><span>začátek prodeje a servisu výpočetní techniky</span></li>
+        <li><span class="ty">1999</span><span>návrh a budování sítí LAN a WAN</span></li>
+        <li><span class="ty">2002</span><span>první prodejna, v Plzni</span></li>
+        <li><span class="ty">2005</span><span>stěhování do Prahy, Na Zlíchově 9</span></li>
+        <li><span class="ty">2006</span><span>rozšíření prodejny na 180 m²</span></li>
+        <li><span class="ty">2007</span><span>vlastní profesionální technické zázemí</span></li>
+        <li><span class="ty">2008</span><span>Gold partner ESET</span></li>
+      </ol>
+      <blockquote class="quote">Děláme naši práci poctivě, protože víme, že nás znáte a denně se potkáváme.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="section section-surface" id="kontakt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Stavte se u nás na Zlíchově</h2>
+    </div>
+    <div class="kontakt">
+      <div class="card card-white addr">
+        <p class="addr-street">Na Zlíchově 214/9<br>Praha 5 (Hlubočepy)</p>
+        <p class="mono gps">N 50° 2.7825′ · E 14° 24.4640′</p>
+        <a class="phone-big" href="tel:+420777902690">777 902 690</a>
+        <p class="phones">tel. <a href="tel:+420212242220">212 242 220</a> · <a href="tel:+420251550458">251 550 458</a></p>
+        <a class="email" href="mailto:info@terycomputer.cz">info@terycomputer.cz</a>
+        <p class="card-note">Na prodejně platíte i kartou.</p>
+      </div>
+      <div class="card card-white">
+        <h3 class="card-title">Otevírací doba</h3>
+        <div class="hours">
+          <div class="hours-scale"><span>8:00</span><span>13:00</span><span>19:00</span></div>
+          <div class="hrow" data-day="1"><span class="hday">Po</span><div class="htrack"><i class="hseg" style="left:9.091%;width:36.364%"></i><i class="hseg" style="left:54.545%;width:36.364%"></i><span class="hlunch" style="left:45.455%;width:9.091%">oběd</span></div></div>
+          <div class="hrow" data-day="2"><span class="hday">Út</span><div class="htrack"><i class="hseg" style="left:9.091%;width:36.364%"></i><i class="hseg" style="left:54.545%;width:36.364%"></i><span class="hlunch" style="left:45.455%;width:9.091%">oběd</span></div></div>
+          <div class="hrow" data-day="3"><span class="hday">St</span><div class="htrack"><i class="hseg" style="left:9.091%;width:36.364%"></i><i class="hseg" style="left:54.545%;width:36.364%"></i><span class="hlunch" style="left:45.455%;width:9.091%">oběd</span></div></div>
+          <div class="hrow" data-day="4"><span class="hday">Čt</span><div class="htrack"><i class="hseg" style="left:9.091%;width:36.364%"></i><i class="hseg" style="left:54.545%;width:36.364%"></i><span class="hlunch" style="left:45.455%;width:9.091%">oběd</span></div></div>
+          <div class="hrow" data-day="5"><span class="hday">Pá</span><div class="htrack"><i class="hseg" style="left:9.091%;width:36.364%"></i><i class="hseg" style="left:54.545%;width:27.273%"></i><span class="hlunch" style="left:45.455%;width:9.091%">oběd</span></div></div>
+          <div class="hrow" data-day="6"><span class="hday">So</span><div class="htrack"><span class="hclosed">zavřeno</span></div></div>
+          <div class="hrow" data-day="0"><span class="hday">Ne</span><div class="htrack"><span class="hclosed">zavřeno</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="mapwrap">
+      <iframe title="Mapa — Na Zlíchově 214/9, Praha 5" src="https://maps.google.com/maps?q=Na%20Zl%C3%ADchov%C4%9B%20214%2F9%2C%20Praha&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer-in">
+    <a class="logo" href="#top" aria-label="TeryComputer.cz — úvod">
+      <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" rx="12" fill="#2e2f31"/>
+        <rect x="17" y="13" width="66" height="60" rx="8" fill="#c24602"/>
+        <rect x="17" y="13" width="66" height="54" rx="8" fill="#f35702"/>
+        <rect x="22" y="17" width="56" height="45" rx="5" fill="#ff6a17"/>
+        <text x="29" y="47" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="800" font-size="31" fill="#fff">T</text>
+        <text x="50" y="88" text-anchor="middle" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" fill="#fff">TeryComputer.cz</text>
+      </svg>
+      <span class="logo-word">TeryComputer.cz</span>
+    </a>
+    <nav class="footer-links" aria-label="Patička">
+      <a href="#servis">Servis a ceník</a>
+      <a href="#prodejna">Prodejna</a>
+      <a href="#vykup">Výkup a bazar</a>
+      <a href="#namiru">PC na míru</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="https://obchod.terycomputer.cz/" target="_blank" rel="noopener">E-shop ↗</a>
+    </nav>
+    <p class="footer-legal">Provozovatel: Richard Körner · IČ 68376677 · Ceny včetně DPH · © 2026 TeryComputer</p>
+  </div>
+</footer>
+
+<!-- ============ MOBILE BAR ============ -->
+<div class="mobilebar" id="mobilebar">
+  <span class="status"><span class="dot" id="mobDot"></span><span id="mobStatus">Po–Čt 9–18, Pá 9–17</span></span>
+  <a class="btn btn-orange btn-sm" href="tel:+420777902690">Zavolat</a>
+</div>
+
+<script>
+/* © 2026 Aetheron (aetheron.cz). All rights reserved. Copying or reuse without written permission is prohibited. */
+(function () {
+  'use strict';
+
+  /* ---------- opening hours, minutes from midnight ---------- */
+  var SCHEDULE = {
+    1: [[540, 780], [840, 1080]],
+    2: [[540, 780], [840, 1080]],
+    3: [[540, 780], [840, 1080]],
+    4: [[540, 780], [840, 1080]],
+    5: [[540, 780], [840, 1020]],
+    6: [],
+    0: []
+  };
+  var DAY_IN = { 0: 'v neděli', 1: 'v pondělí', 2: 'v úterý', 3: 've středu', 4: 've čtvrtek', 5: 'v pátek', 6: 'v sobotu' };
+
+  function hhmm(m) {
+    var h = Math.floor(m / 60), mm = m % 60;
+    return h + ':' + (mm < 10 ? '0' + mm : mm);
+  }
+  /* "v" vs "ve" before the spoken hour */
+  function at(m) {
+    var h = Math.floor(m / 60);
+    return (h === 13 || h === 14) ? 've ' + hhmm(m) : 'v ' + hhmm(m);
+  }
+
+  function pragueNow() {
+    var parts = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Prague',
+      weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false
+    }).formatToParts(new Date());
+    var o = {};
+    parts.forEach(function (p) { o[p.type] = p.value; });
+    var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    return { day: map[o.weekday], minutes: (parseInt(o.hour, 10) % 24) * 60 + parseInt(o.minute, 10) };
+  }
+
+  function nextOpening(day) {
+    for (var i = 1; i <= 7; i++) {
+      var d = (day + i) % 7;
+      if (SCHEDULE[d].length) { return { day: d, minutes: SCHEDULE[d][0][0], tomorrow: i === 1 }; }
+    }
+    return null;
+  }
+
+  function computeStatus() {
+    var now = pragueNow(), today = SCHEDULE[now.day], m = now.minutes;
+    for (var i = 0; i < today.length; i++) {
+      var from = today[i][0], to = today[i][1];
+      if (m >= from && m < to) {
+        var left = to - m;
+        if (left <= 30) { return { open: true, long: 'Otevřeno ještě ' + left + ' min', short: 'Otevřeno ještě ' + left + ' min' }; }
+        return { open: true, long: 'Otevřeno · zavíráme ' + at(to), short: 'Otevřeno do ' + hhmm(to) };
+      }
+    }
+    if (today.length > 1 && m >= today[0][1] && m < today[1][0]) {
+      return { open: false, long: 'Polední pauza · zpět ' + at(today[1][0]), short: 'Polední pauza do ' + hhmm(today[1][0]) };
+    }
+    if (today.length && m < today[0][0]) {
+      return { open: false, long: 'Otevíráme dnes ' + at(today[0][0]), short: 'Otevíráme ' + at(today[0][0]) };
+    }
+    var nx = nextOpening(now.day), when = nx.tomorrow ? 'zítra' : DAY_IN[nx.day];
+    return { open: false, long: 'Zavřeno · otevíráme ' + when + ' ' + at(nx.minutes), short: 'Zavřeno · ' + when + ' ' + at(nx.minutes) };
+  }
+
+  function paintStatus() {
+    var s = computeStatus();
+    [['navStatus', 'navDot', s.long], ['stripStatus', 'stripDot', s.long], ['mobStatus', 'mobDot', s.short]].forEach(function (t) {
+      document.getElementById(t[0]).textContent = t[2];
+      document.getElementById(t[1]).classList.toggle('is-open', s.open);
+    });
+  }
+
+  /* ---------- hours bar: today's row + now marker ---------- */
+  function paintHours() {
+    var now = pragueNow();
+    [].slice.call(document.querySelectorAll('.hrow')).forEach(function (row) {
+      var isToday = parseInt(row.getAttribute('data-day'), 10) === now.day;
+      row.classList.toggle('is-today', isToday);
+      var old = row.querySelector('.hnow');
+      if (old) { old.parentNode.removeChild(old); }
+      if (isToday && now.minutes >= 480 && now.minutes <= 1140) {
+        var mark = document.createElement('i');
+        mark.className = 'hnow';
+        mark.style.left = ((now.minutes - 480) / 660 * 100) + '%';
+        row.querySelector('.htrack').appendChild(mark);
+      }
+    });
+  }
+
+  paintStatus();
+  paintHours();
+  setInterval(function () { paintStatus(); paintHours(); }, 30000);
+
+  /* ---------- hero shelf: thumbnails swap the featured product ---------- */
+  var shelf = document.getElementById('shelf');
+  if (shelf) {
+    var stage = shelf.querySelector('.shelf-stage');
+    var feats = [].slice.call(stage.querySelectorAll('.feat'));
+    var thumbs = [];
+
+    var select = function (i, moveFocus) {
+      feats.forEach(function (f, n) {
+        var on = n === i;
+        f.classList.toggle('is-active', on);
+        f.inert = !on;
+        f.setAttribute('aria-hidden', String(!on));
+      });
+      thumbs.forEach(function (t, n) {
+        var on = n === i;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-pressed', String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
+      if (moveFocus) { thumbs[i].focus(); }
+    };
+
+    /* links (no-JS fallback) become toggle buttons with roving focus */
+    [].slice.call(shelf.querySelectorAll('a.thumb')).forEach(function (a, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'thumb';
+      b.innerHTML = a.innerHTML;
+      b.setAttribute('aria-controls', a.getAttribute('data-feat'));
+      b.addEventListener('click', function () { select(i); });
+      b.addEventListener('keydown', function (e) {
+        var n = thumbs.length, j = null;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { j = (i + 1) % n; }
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { j = (i - 1 + n) % n; }
+        else if (e.key === 'Home') { j = 0; }
+        else if (e.key === 'End') { j = n - 1; }
+        if (j !== null) { e.preventDefault(); select(j, true); }
+      });
+      a.parentNode.replaceChild(b, a);
+      thumbs.push(b);
+    });
+
+    /* all states share one grid cell so the card never changes height */
+    feats.forEach(function (f) { f.hidden = false; });
+    stage.classList.add('is-live');
+    select(0);
+  }
+
+  /* ---------- nav: scrolled shadow + menu ---------- */
+  var nav = document.getElementById('nav');
+  var onScroll = function () { nav.classList.toggle('is-scrolled', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  var setMenu = function (open) {
+    menu.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Zavřít menu' : 'Otevřít menu');
+  };
+  burger.addEventListener('click', function () { setMenu(!menu.classList.contains('is-open')); });
+  menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') { setMenu(false); } });
+
+  /* ---------- mobile bar hides over the contact section ---------- */
+  if ('IntersectionObserver' in window) {
+    var bar = document.getElementById('mobilebar');
+    new IntersectionObserver(function (entries) {
+      bar.classList.toggle('is-hidden', entries[0].isIntersecting);
+    }, { threshold: 0.08 }).observe(document.getElementById('kontakt'));
+  }
+})();
+</script>
+</body>
+</html>
